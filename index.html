@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#10243d"><meta name="description" content="Offline sales and inventory manager">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<title>Daily Sale</title>
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar">
+  <div class="brand"><span class="brand-mark">DS</span><span>DAILY SALE<small>OFFLINE MANAGER</small></span></div>
+  <nav id="nav">
+    <button class="nav-btn active" data-page="dashboard">▦ <span>Dashboard</span></button>
+    <button class="nav-btn" data-page="products">＋ <span>Add Product</span></button>
+    <button class="nav-btn" data-page="house">▤ <span>Product House</span></button>
+    <button class="nav-btn" data-page="sale">↗ <span>Add Sale</span></button>
+    <button class="nav-btn" data-page="history">◷ <span>Sale History</span></button>
+    <button class="nav-btn" data-page="due">৳ <span>Store Due</span></button>
+    <button class="nav-btn" data-page="sit">− <span>SIT Withdraw</span></button>
+    <button class="nav-btn" data-page="targets">◎ <span>Today Target</span></button>
+  </nav>
+  <div class="side-foot"><span class="online-dot"></span> Offline-ready <small>Data stays on this device</small></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><p class="eyebrow" id="eyebrow">OVERVIEW</p><h1 id="pageTitle">Dashboard</h1></div><div class="top-actions"><span class="today-pill" id="todayPill"></span><button class="icon-btn" id="backupBtn" title="Backup data">⇩ Backup</button><label class="icon-btn import-btn">⇧ Restore<input id="restoreInput" type="file" accept=".json,application/json" hidden></label></div></header>
+<div id="pageContent" class="content"></div>
+<footer>DAILY SALE <span>•</span> Your data is stored locally on this device.</footer>
+</main>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
